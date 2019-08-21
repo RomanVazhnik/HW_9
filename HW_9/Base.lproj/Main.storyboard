@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-ED-BOS">
-                                <rect key="frame" x="70.5" y="688.5" width="273" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextAnimationButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="icb-Wl-xqO"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHS-zP-wb2" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="70.5" y="88" width="273" height="181"/>
                                 <subviews>
@@ -35,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.44342583200000002" green="0.57008239309999997" blue="0.62734633529999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="xrv-8Z-Xgm" firstAttribute="centerY" secondItem="HHS-zP-wb2" secondAttribute="centerY" id="ApF-cZ-wiD"/>
                                     <constraint firstItem="xrv-8Z-Xgm" firstAttribute="centerX" secondItem="HHS-zP-wb2" secondAttribute="centerX" id="G28-CI-5E8"/>
@@ -44,14 +37,38 @@
                                     <constraint firstAttribute="trailing" secondItem="xrv-8Z-Xgm" secondAttribute="trailing" constant="20" id="eA8-cK-AU8"/>
                                     <constraint firstAttribute="width" secondItem="HHS-zP-wb2" secondAttribute="height" multiplier="273:181" id="nOL-XB-MLD"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-ED-BOS">
+                                <rect key="frame" x="20" y="722" width="374" height="91"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hUe-ED-BOS" secondAttribute="height" multiplier="207:34" constant="-180.02941176470586" id="jZV-8R-zVX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextAnimationButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="icb-Wl-xqO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hUe-ED-BOS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9KF-ES-k9M"/>
+                            <constraint firstItem="hUe-ED-BOS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="NR7-3X-AA0"/>
+                            <constraint firstItem="hUe-ED-BOS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Od4-ml-THr"/>
                             <constraint firstItem="HHS-zP-wb2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="2" id="PIx-dR-3Nb"/>
-                            <constraint firstItem="HHS-zP-wb2" firstAttribute="width" secondItem="hUe-ED-BOS" secondAttribute="width" id="PLd-Kc-UFX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hUe-ED-BOS" secondAttribute="bottom" multiplier="1.2" id="Qk5-kR-VaO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hUe-ED-BOS" secondAttribute="bottom" constant="49" id="ezg-K8-P0I"/>
                             <constraint firstItem="HHS-zP-wb2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nFz-XY-ajB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

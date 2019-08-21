@@ -19,7 +19,6 @@ let animations = [
     "swing",
     "flipX",
     "flipY",
-    "fall",
     "squeezeLeft",
     "squeezeRight",
     "squeezeDown",
@@ -42,5 +41,5 @@ let curves = [
     "linear",
     "easeIn",
     "easeOut",
-    "easeInOut",
+    "easeInOut"
 ]
