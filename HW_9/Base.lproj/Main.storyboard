@@ -43,7 +43,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-ED-BOS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-ED-BOS" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="20" y="722" width="374" height="91"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
@@ -76,7 +76,7 @@
                     <connections>
                         <outlet property="animatedView" destination="HHS-zP-wb2" id="dRg-9l-ZQh"/>
                         <outlet property="animationName" destination="xrv-8Z-Xgm" id="kez-d7-uJB"/>
-                        <outlet property="nextAnimationButton" destination="hUe-ED-BOS" id="gCq-p3-2dB"/>
+                        <outlet property="nextAnimationButton" destination="hUe-ED-BOS" id="Ev4-LD-Omg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

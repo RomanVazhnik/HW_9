@@ -10,7 +10,7 @@ import Spring
 
 class ViewController: UIViewController {
     
-    @IBOutlet var nextAnimationButton: UIButton!
+    @IBOutlet var nextAnimationButton: SpringButton!
     @IBOutlet var animatedView: SpringView!
     @IBOutlet var animationName: SpringLabel!
     
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         nextAnimationButton.setTitle("\(nextAnimation!) + \(nextCurve!)", for: .normal)
         
         animatedViewSetup()
+        nextAnimationButtonSetup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,6 +44,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextAnimationButtonPressed() {
+        
+        nextAnimationButton.animation = "shake"
+        nextAnimationButton.animate()
         
         animationName.text = "This animation was (\(nextAnimation!) + \(nextCurve!))"
         animatedView.animation = nextAnimation!
@@ -53,6 +57,12 @@ class ViewController: UIViewController {
         nextCurve = curves.randomElement()
         
         nextAnimationButton.setTitle("\(nextAnimation!) + \(nextCurve!)", for: .normal)
+    }
+    
+    private func nextAnimationButtonSetup() {
+        nextAnimationButton.duration = 1
+        nextAnimationButton.force = 1
+        nextAnimationButton.delay = 0
     }
     
     private func animatedViewSetup() {
