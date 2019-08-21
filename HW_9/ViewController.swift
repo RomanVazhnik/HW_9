@@ -36,17 +36,10 @@ class ViewController: UIViewController {
         nextAnimationButton.setTitle("\(nextAnimation!) + \(nextCurve!)", for: .normal)
         
         animatedViewSetup()
-        
     }
     
     override func viewDidLayoutSubviews() {
         gradient.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-    }
-    
-    func animatedViewSetup() {
-        animatedView.duration = 1
-        animatedView.force = 1
-        animatedView.delay = 0
     }
 
     @IBAction func nextAnimationButtonPressed() {
@@ -60,7 +53,12 @@ class ViewController: UIViewController {
         nextCurve = curves.randomElement()
         
         nextAnimationButton.setTitle("\(nextAnimation!) + \(nextCurve!)", for: .normal)
-        
+    }
+    
+    private func animatedViewSetup() {
+        animatedView.duration = 1
+        animatedView.force = 1
+        animatedView.delay = 0
     }
     
 }
